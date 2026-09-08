@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mykhailo Lypenko — Product Manager</title>
+<meta name="description" content="Product Manager with experience in digital products, business analysis, product strategy, and cross-functional coordination.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Mykhailo Lypenko — Product Manager_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f4f2;
+    --bg-2:#e9e9e6;
+    --bg-3:#dedede;
+    --ink:#0e0e0e;
+    --ink-2:#1a1a1a;
+    --muted:#6b6b6b;
+    --line:#d4d4d1;
+    --line-strong:#0e0e0e;
+    --accent:#0e0e0e;
+    --radius:999px;
+    --pad-x:clamp(20px, 5vw, 80px);
+    --container:1280px;
+    --t-display: clamp(48px, 9vw, 140px);
+    --t-h1: clamp(36px, 5vw, 72px);
+    --t-h2: clamp(28px, 3.6vw, 52px);
+    --t-body: 17px;
+    --t-small: 13px;
+    --ease: cubic-bezier(.22,1,.36,1);
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    font-family:"Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    font-size:var(--t-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  button{ font:inherit; cursor:pointer; }
+
+  /* ---------- Reveal animation utility ---------- */
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal.delay-1{ transition-delay:.08s; }
+  .reveal.delay-2{ transition-delay:.16s; }
+  .reveal.delay-3{ transition-delay:.24s; }
+  .reveal.delay-4{ transition-delay:.32s; }
+
+  /* ---------- Header / Nav ---------- */
+  .nav{
+    position:fixed; inset:0 0 auto 0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px var(--pad-x);
+    transition: background .3s var(--ease), backdrop-filter .3s var(--ease), border-color .3s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  .nav.scrolled{
+    background:rgba(244,244,242,.72);
+    backdrop-filter:saturate(160%) blur(14px);
+    -webkit-backdrop-filter:saturate(160%) blur(14px);
+    border-bottom-color:var(--line);
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:"JetBrains Mono", monospace;
+    font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+  }
+  .logo .mark{
+    width:32px; height:32px; border-radius:8px;
+    background:var(--ink); color:var(--bg);
+    display:grid; place-items:center;
+    font-family:"Archivo"; font-weight:800; font-size:14px;
+  }
+  .nav ul{
+    list-style:none; display:flex; gap:36px; margin:0; padding:0;
+  }
+  .nav ul a{
+    font-size:14px; letter-spacing:.02em;
+    color:var(--ink-2); opacity:.7;
+    position:relative; padding:6px 0;
+    transition: opacity .25s var(--ease), color .25s var(--ease);
+  }
+  .nav ul a::after{
+    content:""; position:absolute; left:0; right:0; bottom:0;
+    height:1px; background:currentColor; transform:scaleX(0); transform-origin:left;
+    transition: transform .35s var(--ease);
+  }
+  .nav ul a:hover{ opacity:1; }
+  .nav ul a.active{ opacity:1; }
+  .nav ul a.active::after{ transform:scaleX(1); }
+  .nav .cta{
+    border:1px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    border-radius:var(--radius);
+    padding:11px 22px;
+    font-size:13px; letter-spacing:.06em; text-transform:uppercase; font-weight:600;
+    transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+  }
+  .nav .cta:hover{ background:var(--ink); color:var(--bg); transform:translateY(-1px); }
+  .lang-switch{ display:flex; gap:4px; margin-left:auto; margin-right:18px; }
+  .lang-switch button{ border:0; background:transparent; padding:7px 6px; color:var(--muted); font:500 11px "JetBrains Mono",monospace; letter-spacing:.08em; }
+  .lang-switch button.active{ color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
+  .menu-btn{
+    display:none; border:1px solid var(--ink); background:transparent;
+    width:42px; height:42px; border-radius:var(--radius);
+  }
+  .menu-btn span{ display:block; width:16px; height:1.5px; background:var(--ink); margin:3px auto; }
+
+  /* ---------- Section frame ---------- */
+  section{ position:relative; }
+  .container{ max-width:var(--container); margin:0 auto; padding:0 var(--pad-x); }
+  .section-pad{ padding:120px 0; }
+  .eyebrow{
+    display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid var(--ink);
+    padding:8px 22px;
+    font-family:"JetBrains Mono", monospace;
+    font-size:11px; letter-spacing:.32em; text-transform:uppercase; font-weight:500;
+  }
+  .section-head{
+    display:flex; flex-direction:column; align-items:center; gap:24px;
+    margin-bottom:72px; text-align:center;
+  }
+  .section-head h2{
+    font-size:var(--t-h1); font-weight:800; letter-spacing:-.02em;
+    margin:0; line-height:1; text-wrap:balance;
+  }
+  .section-head p{
+    max-width:560px; color:var(--muted); margin:0;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:grid; grid-template-columns: 1.05fr .95fr;
+    overflow:hidden;
+    padding-top:90px;
+  }
+  .hero .left{
+    background:var(--bg-2);
+    padding: 80px var(--pad-x) 80px;
+    display:flex; flex-direction:column; justify-content:center;
+    position:relative; z-index:2;
+  }
+  .hero .right{
+    background:var(--ink);
+    color:var(--bg);
+    position:relative; z-index:1;
+    /* diagonal cut: takes a slice from left side */
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+    margin-left:-12%;
+  }
+  .hero .kicker{
+    font-family:"JetBrains Mono", monospace;
+    font-size:13px; letter-spacing:.28em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:24px;
+  }
+  .hero h1{
+    font-size:var(--t-display);
+    line-height:.92; letter-spacing:-.035em; font-weight:800;
+    margin:0 0 18px; text-wrap:balance;
+  }
+  .hero h1 .outline{
+    -webkit-text-stroke:1.5px var(--ink); color:transparent;
+    font-style:italic;
+  }
+  .hero .role{
+    font-family:"JetBrains Mono", monospace;
+    font-size:14px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--ink-2);
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:48px;
+  }
+  .hero .role::before{
+    content:""; width:48px; height:1px; background:var(--ink);
+  }
+  .hero .socials{
+    display:flex; gap:12px; margin-bottom:40px;
+  }
+  .hero .socials a{
+    width:46px; height:46px; border-radius:50%;
+    border:1px solid var(--ink);
+    display:grid; place-items:center;
+    transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+  }
+  .hero .socials a:hover{
+    background:var(--ink); color:var(--bg); transform:translateY(-2px);
+  }
+  .hero .meta{
+    display:flex; gap:48px; color:var(--muted);
+    font-family:"JetBrains Mono", monospace; font-size:11px;
+    letter-spacing:.2em; text-transform:uppercase;
+  }
+  .hero .meta b{ display:block; color:var(--ink); font-family:"Archivo"; font-weight:600; font-size:14px; letter-spacing:0; text-transform:none; margin-top:4px;}
+  .portrait-wrap{
+    position:absolute; inset:0;
+    display:flex; align-items:flex-end; justify-content:center;
+    padding: 90px 0 0 8%;
+  }
+  .portrait{
+    position:relative;
+    width:min(560px, 80%);
+    aspect-ratio: 4/5;
+    background:
+      repeating-linear-gradient(45deg, #1a1a1a 0 12px, #161616 12px 24px);
+    border:1px solid #2a2a2a;
+    overflow:hidden;
+  }
+  .portrait img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; position:relative; z-index:2; }
+  .portrait.has-photo::before{ display:none; }
+  .portrait::before{
+    /* gray silhouette */
+    content:""; position:absolute; left:50%; bottom:-2%;
+    transform:translateX(-50%);
+    width:78%; aspect-ratio:1/1.4;
+    background:
+      radial-gradient(ellipse 30% 26% at 50% 22%, #6e6e6e 0 99%, transparent 100%),
+      radial-gradient(ellipse 50% 50% at 50% 78%, #6e6e6e 0 70%, transparent 71%);
+    filter:blur(.5px);
+  }
+  .portrait .ph-label{
+    position:absolute; top:14px; left:14px;
+    font-family:"JetBrains Mono", monospace; font-size:10px; letter-spacing:.2em;
+    color:#9a9a9a; text-transform:uppercase;
+  }
+  .portrait .ph-corner{
+    position:absolute; bottom:14px; right:14px;
+    font-family:"JetBrains Mono", monospace; font-size:10px; letter-spacing:.2em;
+    color:#9a9a9a; text-transform:uppercase;
+  }
+  .hero-stamp{
+    position:absolute;
+    right:var(--pad-x); top:120px;
+    font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:.3em;
+    color:#9a9a9a; text-transform:uppercase;
+    writing-mode: vertical-rl; transform:rotate(180deg);
+    z-index:3;
+  }
+
+  /* Hero entrance */
+  .hero .left > *{
+    opacity:0; transform:translateX(-28px);
+    animation: slideInLeft .9s var(--ease) forwards;
+  }
+  .hero .left .kicker{ animation-delay:.1s; }
+  .hero .left h1{ animation-delay:.18s; }
+  .hero .left .role{ animation-delay:.28s; }
+  .hero .left .socials{ animation-delay:.36s; }
+  .hero .left .meta{ animation-delay:.44s; }
+  .portrait{
+    opacity:0; transform:translateX(24px) scale(.98);
+    animation: fadeInRight 1.1s var(--ease) .35s forwards;
+  }
+  @keyframes slideInLeft{ to{ opacity:1; transform:none; } }
+  @keyframes fadeInRight{ to{ opacity:1; transform:none; } }
+
+  /* ---------- Intro strip ---------- */
+  .intro{
+    background:var(--ink); color:var(--bg);
+    padding:96px var(--pad-x);
+    position:relative; overflow:hidden;
+  }
+  .intro .container{ position:relative; z-index:2; display:grid; grid-template-columns: 1fr 1.4fr; gap:64px; align-items:center;}
+  .intro h3{
+    margin:0; font-size:var(--t-h2); font-weight:700; letter-spacing:-.02em; line-height:1.05;
+  }
+  .intro p{ margin:0 0 24px; color:#bdbdbd; max-width:62ch; }
+  .intro .read-more{
+    display:inline-flex; align-items:center; gap:14px;
+    border:1px solid #2e2e2e; color:var(--bg);
+    border-radius:var(--radius); padding:12px 22px;
+    background:transparent;
+    font-size:13px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+    transition:background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+  }
+  .intro .read-more:hover{ background:var(--bg); color:var(--ink); border-color:var(--bg); }
+  .intro .deco{
+    position:absolute; right:-6%; top:50%; transform:translateY(-50%);
+    font-family:"Archivo"; font-weight:900; font-size:clamp(280px, 36vw, 520px);
+    line-height:.8; letter-spacing:-.05em;
+    color:rgba(255,255,255,.04);
+    user-select:none; pointer-events:none;
+    z-index:1;
+  }
+
+  /* ---------- About ---------- */
+  .about{ background:var(--bg); }
+  .about .lead{
+    max-width:720px; margin:0 auto 64px;
+    text-align:center; color:var(--muted);
+    font-size:18px; line-height:1.6;
+  }
+  .services{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;
+  }
+  .service{
+    background:var(--bg-2);
+    padding:40px 32px;
+    border:1px solid transparent;
+    transition: transform .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+    position:relative;
+  }
+  .service:hover{
+    background:var(--ink); color:var(--bg); transform:translateY(-6px);
+    border-color:var(--ink);
+  }
+  .service:hover .svc-icon{ border-color:var(--bg); color:var(--bg); }
+  .service:hover .svc-num{ color:#777; }
+  .svc-icon{
+    width:56px; height:56px; border-radius:50%;
+    border:1px solid var(--ink);
+    display:grid; place-items:center;
+    margin-bottom:28px;
+    transition: border-color .4s var(--ease), color .4s var(--ease);
+  }
+  .service h4{
+    margin:0 0 12px; font-size:24px; font-weight:700; letter-spacing:-.01em;
+  }
+  .service p{
+    margin:0; font-size:15px; line-height:1.6; color:inherit; opacity:.78;
+  }
+  .svc-num{
+    position:absolute; right:24px; top:24px;
+    font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:.2em;
+    color:var(--muted); transition: color .4s var(--ease);
+  }
+
+  /* ---------- Skills ---------- */
+  .skills{ background:var(--bg-2); }
+  .skills .group{ margin-bottom:64px; }
+  .skills .group:last-child{ margin-bottom:0; }
+  .group-head{
+    display:flex; align-items:center; gap:18px; margin-bottom:24px;
+  }
+  .group-head h3{
+    margin:0; font-size:20px; font-weight:700; letter-spacing:.02em; text-transform:uppercase;
+  }
+  .group-head .rule{ flex:1; height:1px; background:var(--line); }
+  .group-head .count{
+    font-family:"JetBrains Mono", monospace; font-size:11px; color:var(--muted); letter-spacing:.2em;
+  }
+  .skill-grid{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:12px;
+  }
+  .skill{
+    background:var(--bg);
+    border:1px solid var(--line);
+    padding:24px 16px;
+    display:flex; flex-direction:column; align-items:center; gap:12px;
+    transition: transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+  }
+  .skill:hover{
+    background:var(--ink); color:var(--bg); transform:translateY(-4px);
+    border-color:var(--ink);
+  }
+  .skill .glyph{
+    width:36px; height:36px; display:grid; place-items:center;
+    font-family:"JetBrains Mono", monospace; font-weight:500; font-size:14px;
+    border:1px solid currentColor; border-radius:8px;
+    opacity:.85;
+  }
+  .skill .name{
+    font-size:13px; letter-spacing:.04em;
+  }
+
+  /* ---------- Portfolio ---------- */
+  .portfolio{ background:var(--bg); }
+  .banner{
+    height:220px; margin-bottom:72px;
+    background:
+      linear-gradient(90deg, var(--ink) 0%, var(--ink) 50%, var(--bg-2) 50%, var(--bg-2) 100%);
+    position:relative; overflow:hidden;
+    display:flex; align-items:center;
+  }
+  .banner .container{ display:flex; justify-content:space-between; align-items:center; width:100%; }
+  .banner .b-l{ color:var(--bg); }
+  .banner .b-l span{ font-family:"JetBrains Mono", monospace; font-size:12px; letter-spacing:.2em; color:#999;}
+  .banner .b-l h3{ font-size:clamp(40px, 5vw, 72px); font-weight:800; margin:6px 0 0; letter-spacing:-.02em; line-height:.95;}
+  .banner .b-r{ color:var(--ink); text-align:right; }
+  .banner .b-r .num{ font-family:"Archivo"; font-weight:900; font-size:clamp(80px, 11vw, 160px); line-height:.9; letter-spacing:-.04em;}
+  .banner .b-r .lbl{ font-family:"JetBrains Mono", monospace; font-size:12px; letter-spacing:.2em; color:var(--muted);}
+
+  .filters{
+    display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
+    margin-bottom:48px;
+  }
+  .filters button{
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--ink);
+    padding:10px 22px;
+    border-radius:var(--radius);
+    font-size:13px; letter-spacing:.06em;
+    transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+  }
+  .filters button:hover{ border-color:var(--ink); }
+  .filters button.active{ background:var(--ink); color:var(--bg); border-color:var(--ink);}
+
+  .projects{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;
+  }
+  .project{
+    background:var(--bg-2);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    transition: transform .4s var(--ease);
+  }
+  .project:hover{ transform:translateY(-4px); }
+  .project .thumb{
+    position:relative; aspect-ratio: 4/3; overflow:hidden;
+    background: repeating-linear-gradient(45deg, var(--bg-3) 0 14px, #d5d5d2 14px 28px);
+    border-bottom:1px solid var(--line);
+  }
+  .project .thumb .ph{
+    position:absolute; inset:0; display:grid; place-items:center;
+    color:var(--muted); font-family:"JetBrains Mono", monospace;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+  }
+  .project .overlay{
+    position:absolute; inset:0;
+    background:rgba(14,14,14,.86);
+    color:var(--bg);
+    opacity:0; transform:translateY(8px);
+    transition: opacity .35s var(--ease), transform .35s var(--ease);
+    display:flex; align-items:center; justify-content:center; gap:14px;
+  }
+  .project:hover .overlay{ opacity:1; transform:none; }
+  .overlay .pill{
+    border:1px solid var(--bg);
+    color:var(--bg);
+    background:transparent;
+    padding:10px 18px;
+    border-radius:var(--radius);
+    font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    transition: background .25s var(--ease), color .25s var(--ease);
+  }
+  .overlay .pill:hover{ background:var(--bg); color:var(--ink); }
+  .project .body{ padding:24px 24px 28px; }
+  .project h4{ margin:0 0 8px; font-size:20px; font-weight:700; letter-spacing:-.01em;}
+  .project p{ margin:0 0 16px; color:var(--muted); font-size:14px; line-height:1.55;}
+  .tags{ display:flex; flex-wrap:wrap; gap:6px;}
+  .tag{
+    font-family:"JetBrains Mono", monospace;
+    font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+    border:1px solid var(--line); padding:4px 10px; color:var(--muted);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{ background:var(--bg-2); }
+  .contact .blurb{ max-width:560px; margin:0 auto 56px; text-align:center; color:var(--muted);}
+  .form{ max-width:760px; margin:0 auto; }
+  .row{ display:grid; grid-template-columns: 1fr 1fr; gap:36px; margin-bottom:36px; }
+  .field{ position:relative; }
+  .field input, .field textarea{
+    width:100%; border:0;
+    border-bottom:1px solid var(--line-strong);
+    background:transparent;
+    padding:14px 0 12px;
+    font:inherit; font-size:16px; color:var(--ink);
+    outline:none;
+    transition: border-color .3s var(--ease);
+  }
+  .field textarea{ resize:vertical; min-height:120px; }
+  .field label{
+    position:absolute; left:0; top:14px;
+    color:var(--muted); font-size:14px; letter-spacing:.04em;
+    pointer-events:none;
+    transition: transform .3s var(--ease), font-size .3s var(--ease), color .3s var(--ease);
+  }
+  .field input:focus + label,
+  .field textarea:focus + label,
+  .field input:not(:placeholder-shown) + label,
+  .field textarea:not(:placeholder-shown) + label{
+    transform:translateY(-22px); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink);
+  }
+  .field .bar{
+    position:absolute; left:0; bottom:0; height:1px; background:var(--ink);
+    width:0; transition: width .35s var(--ease);
+  }
+  .field input:focus ~ .bar,
+  .field textarea:focus ~ .bar{ width:100%; }
+  .submit-row{
+    display:flex; align-items:center; gap:24px; margin-top:40px;
+  }
+  .submit-row .line{ flex:1; height:1px; background:var(--line-strong); }
+  .submit{
+    border:1px solid var(--ink);
+    background:var(--ink); color:var(--bg);
+    border-radius:var(--radius);
+    padding:14px 36px;
+    font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:600;
+    transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+  }
+  .submit:hover{ background:transparent; color:var(--ink); transform:translateY(-2px); }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink); color:var(--bg);
+    padding:64px var(--pad-x) 28px;
+  }
+  .foot-top{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-bottom:32px; border-bottom:1px solid #1f1f1f; margin-bottom:24px;
+  }
+  .foot-name{
+    font-size:clamp(40px, 5vw, 76px); font-weight:800; letter-spacing:-.03em; margin:0; line-height:1;
+  }
+  .foot-socials{ display:flex; gap:10px; }
+  .foot-socials a{
+    width:44px; height:44px; border-radius:50%;
+    border:1px solid #2e2e2e;
+    display:grid; place-items:center;
+    transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+  }
+  .foot-socials a:hover{ background:var(--bg); color:var(--ink); border-color:var(--bg); }
+  .foot-bot{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:#7a7a7a;
+  }
+  .foot-bot a{ color:#bdbdbd; }
+
+  /* ---------- Back to top ---------- */
+  .to-top{
+    position:fixed; right:24px; bottom:24px; z-index:60;
+    width:48px; height:48px; border-radius:50%;
+    background:var(--ink); color:var(--bg); border:0;
+    display:grid; place-items:center;
+    opacity:0; transform:translateY(12px); pointer-events:none;
+    transition: opacity .3s var(--ease), transform .3s var(--ease), background .25s var(--ease);
+  }
+  .to-top.show{ opacity:1; transform:none; pointer-events:auto; }
+  .to-top:hover{ background:#2a2a2a; }
+
+  .background-section {background:var(--bg-2);scroll-margin-top:100px;}
+  .background-section h3 {font-size:28px;margin:48px 0 24px;}
+  .resume-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+  .resume-card {border-top:1px solid var(--line-strong);padding:28px 0;margin-bottom:24px;min-width:0;}
+  .resume-card h4 {font-size:24px;line-height:1.3;margin:12px 0;}
+  .resume-meta {font-size:14px;color:var(--muted);}
+  .resume-link {text-decoration:underline;text-underline-offset:4px;font-size:16px;}
+  .credential-id {overflow-wrap:anywhere;font-size:14px;}
+  .resume-card li {margin:12px 0;}
+  [data-profile-lang][hidden] {display:none;}
+  @media(max-width:960px){.resume-grid{grid-template-columns:1fr;}}
+  /* ---------- Mobile ---------- */
+  @media (max-width: 960px){
+    .nav ul{ display:none; }
+    .nav .cta{ display:none; }
+    .menu-btn{ display:block; }
+    .nav nav.open{ display:block; position:absolute; top:78px; left:0; right:0; padding:18px var(--pad-x); background:rgba(244,244,242,.98); border-bottom:1px solid var(--line); }
+    .nav nav.open ul{ display:flex; flex-direction:column; gap:14px; }
+    .lang-switch{ margin-left:auto; margin-right:10px; }
+    .hero{ grid-template-columns:1fr; min-height:auto; padding-top:120px;}
+    .hero .left{ padding:40px var(--pad-x); }
+    .hero .right{
+      clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+      margin-left:0; min-height:520px;
+    }
+    .portrait-wrap{ padding: 80px var(--pad-x) 0; }
+    .hero-stamp{ display:none; }
+    .intro .container{ grid-template-columns:1fr; gap:32px; }
+    .services{ grid-template-columns:1fr; }
+    .skill-grid{ grid-template-columns: repeat(3, 1fr); }
+    .projects{ grid-template-columns:1fr; }
+    .row{ grid-template-columns:1fr; gap:28px; }
+    .banner{ height:auto; padding:32px 0; }
+    .banner .container{ flex-direction:column; align-items:flex-start; gap:24px; }
+    .banner .b-r{ text-align:left; }
+  }
+
+  /* Layout and interaction refinements */
+  section[id] {scroll-margin-top:100px;}
+  .nav {gap:24px;background:rgba(244,244,242,.96);padding-inline:clamp(20px,3vw,48px);}
+  .logo {flex-shrink:0;letter-spacing:.06em;white-space:nowrap;}
+  .nav {justify-content:flex-start;}
+  .nav nav {margin-left:20px;}
+  .nav ul {gap:22px;}
+  .nav ul a {white-space:nowrap;}
+  .lang-switch {margin:0 0 0 auto;flex-shrink:0;position:relative;display:block;}
+  .lang-switch summary {list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;font-size:14px;white-space:nowrap;border-radius:8px;}
+  .lang-switch summary::-webkit-details-marker {display:none;}
+  .lang-switch summary::after {content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-4px;}
+  .lang-switch[open] summary::after {transform:rotate(225deg);margin-top:4px;}
+  .lang-switch summary:hover,.lang-switch[open] summary {background:var(--bg-2);}
+  .language-options {position:absolute;right:0;top:calc(100% + 10px);width:180px;padding:6px;background:var(--bg);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.1);}
+  .language-options button {display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;padding:10px 12px!important;font:inherit!important;font-size:14px!important;letter-spacing:0!important;border-radius:6px;}
+  .language-options button:hover,.language-options button:focus-visible {background:var(--bg-2);}
+  .language-options button.active {text-decoration:none;font-weight:600!important;}
+  .language-options button.active::after {content:"✓";}
+  .lang-switch summary:focus-visible {outline:2px solid var(--ink);outline-offset:3px;}
+  .lang-switch button {font-size:13px;min-height:44px;}
+  .nav .cta {display:none;}
+  .hero h1 {font-size:clamp(44px,6.7vw,100px);overflow-wrap:normal;}
+  .hero .left {min-width:0;}
+  .hero .meta {flex-wrap:wrap;gap:24px;}
+  .hero .meta b {max-width:170px;}
+  .section-pad {padding:80px 0;}
+  .section-head {margin-bottom:48px;}
+  .contact .blurb {margin-bottom:0;}
+  .form-note {font-size:14px;color:var(--muted);margin-bottom:36px;}
+  .form-note a {text-decoration:underline;overflow-wrap:anywhere;}
+  .field {display:flex;flex-direction:column;}
+  .field label,.field input:focus + label,.field textarea:focus + label,
+  .field input:not(:placeholder-shown) + label,.field textarea:not(:placeholder-shown) + label {
+    position:static;order:-1;transform:none;font-size:14px;letter-spacing:0;text-transform:none;color:var(--muted);
+  }
+  .field input,.field textarea {display:block;}
+  .field input:focus,.field textarea:focus {box-shadow:0 1px 0 var(--ink);}
+  .row:has(#f-subject) {grid-template-columns:1fr;}
+  .submit-row .line {display:none;}
+  .submit-row {justify-content:center;}
+  .tag {font-size:12px;letter-spacing:.04em;}
+  .skill .name {font-size:14px;}
+  .project[hidden] {display:none;}
+  .project .overlay {opacity:1;}
+  .project .thumb {min-height:180px;}
+  .project .ph {padding:24px;text-align:center;overflow-wrap:anywhere;}
+  .foot-top,.foot-bot {gap:24px;flex-wrap:wrap;}
+  .foot-name {font-size:clamp(28px,4vw,52px);}
+  a:focus-visible,button:focus-visible {outline:2px solid currentColor;outline-offset:5px;}
+  @media(max-width:1200px){
+    .nav nav {margin-left:0;}
+    .nav ul {display:none;}
+    .menu-btn {display:block;flex-shrink:0;}
+    .lang-switch {margin-left:auto;}
+    .nav nav.open {position:absolute;top:100%;left:0;right:0;padding:24px;background:var(--bg);border-bottom:1px solid var(--line);}
+    .nav nav.open ul {display:flex;flex-direction:column;gap:16px;}
+  }
+  @media(max-width:600px){
+    .nav {gap:10px;padding:12px 16px;}
+    .logo > span:last-child {display:none;}
+    .hero .right {min-height:400px;}
+    .portrait-wrap {padding-top:32px;}
+    .skill-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+    .section-pad {padding:56px 0;}
+    .filters {flex-wrap:wrap;}
+    .section-head h2 {font-size:32px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html {scroll-behavior:auto;}
+    *,*::before,*::after {transition:none!important;animation:none!important;}
+    .reveal {opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav scrolled" id="nav">
+  <a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#top" class="logo" aria-label="Logo">
+    <span class="mark">M</span>
+    <span>Mykhailo Lypenko</span>
+  </a>
+  <nav id="main-navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#about" data-link="" data-i18n="nav.about" class="">About</a></li>
+      <li><a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#background" data-link="" id="background-nav" class="">Background</a></li>
+      <li><a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#skills" data-link="" data-i18n="nav.skills" class="">Skills</a></li>
+      <li><a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#portfolio" data-link="" data-i18n="nav.work" class="">Case Studies</a></li>
+      <li><a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#contact" data-link="" data-i18n="nav.contact" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  <details class="lang-switch" id="language-picker">
+    <summary aria-label="Choose language"><span id="current-language">English</span></summary>
+    <div class="language-options" aria-label="Languages">
+      <button type="button" class="active" data-lang="en" lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="sk" lang="sk" aria-pressed="false" class="">Slovenčina</button>
+      <button type="button" data-lang="ua" lang="uk" aria-pressed="false">Українська</button>
+    </div>
+  </details>
+  <a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#contact" class="cta" data-i18n="nav.cta">Contact Me</a>
+  <button class="menu-btn" aria-label="Menu" aria-controls="main-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero">
+  <div class="left">
+    <div class="kicker" data-i18n="hero.kicker">Product Portfolio — 2026</div>
+    <h1>
+      <span data-i18n="hero.hello">Hi, I am</span><br>
+      <span>Mykhailo</span> <span class="outline">Lypenko</span>
+    </h1>
+    <div class="role">Product Manager</div>
+    <div class="socials" aria-label="Social links">
+      <a href="mailto:mykhailolypenko@outlook.com" aria-label="Email" title="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 7 9-7"></path></svg>
+      </a>
+      <a href="https://t.me/MykhailoLypenko" target="_blank" rel="noreferrer" aria-label="Telegram" title="Telegram"><span aria-hidden="true">TG</span>
+      </a>
+      <a href="https://www.linkedin.com/in/mykhailolypenko/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.2 8h4.6v14H.2V8Zm7.5 0h4.41v1.92h.06c.62-1.17 2.13-2.4 4.39-2.4 4.69 0 5.56 3.08 5.56 7.08V22h-4.6v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.51 1.69-2.51 3.43V22H7.7V8Z"></path></svg>
+      </a>
+      <a href="https://www.instagram.com/flopyevv/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+      </a>
+    </div>
+    <div class="meta">
+      <div data-i18n="hero.based">Based in<b>Žilina / Bratislava</b></div>
+      <div data-i18n="hero.available">Available<b>Open to work</b></div>
+      <div data-i18n="hero.experience">Commercial experience<b>11 months</b></div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="hero-stamp">Mykhailo Lypenko — Portfolio / 2026</div>
+    <div class="portrait-wrap">
+      <div class="portrait has-photo" aria-label="Portrait of Mykhailo Lypenko">
+        <img src="./Mykhailo Lypenko — Product Manager_files/mykhailo-lypenko.jpg" alt="Mykhailo Lypenko">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about section-pad">
+  <div class="container">
+    <div class="section-head reveal in">
+      <span class="eyebrow" data-i18n="about.label">About Me</span>
+      <h2 data-i18n="about.title">Product thinking backed by technology.</h2>
+      <p class="lead" data-i18n="about.body">I am a Product Manager with hands-on experience leading a corporate website redesign, coordinating marketing and technical teams, and improving online sales by more than 30%. With a Computer Science degree and ongoing studies in Information Management, I bridge business goals, user needs, and development.</p>
+    </div>
+
+    <div class="services">
+      <article class="service reveal delay-1 in">
+        <span class="svc-num">01 / PRODUCT</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21l4-1 11-11-3-3L4 17l-1 4Z"></path><path d="M14 6l3 3"></path></svg>
+        </div>
+        <h4 data-i18n="service.product.title">Product Strategy</h4>
+        <p data-i18n="service.product.body">Defining product value, shaping concepts, prioritising features, and keeping decisions connected to user and business needs.</p>
+      </article>
+
+      <article class="service reveal delay-2 in">
+        <span class="svc-num">02 / ANALYSIS</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 8l-5 4 5 4"></path><path d="M16 8l5 4-5 4"></path><path d="M14 4l-4 16"></path></svg>
+        </div>
+        <h4 data-i18n="service.analysis.title">Business Analysis</h4>
+        <p data-i18n="service.analysis.body">Translating goals into clear requirements, improving workflows, and connecting stakeholder expectations with delivery.</p>
+      </article>
+
+      <article class="service reveal delay-3 in">
+        <span class="svc-num">03 / DELIVERY</span>
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"></path></svg>
+        </div>
+        <h4 data-i18n="service.delivery.title">Project Coordination</h4>
+        <p data-i18n="service.delivery.body">Aligning cross-functional teams, managing priorities and deadlines, and presenting product direction clearly.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="background" class="section-pad background-section"><div class="container">
+<div data-profile-lang="en">
+<div class="section-head"><span class="eyebrow">Professional experience</span><h2>Experience &amp; Education</h2></div>
+<h3>Professional experience</h3><article class="resume-card"><p class="resume-meta">Aug 2024 – Jun 2025 · Part-time · 11 months</p><h4>Digital Product Manager / Product Manager</h4><p><strong>LLC Mix-Line</strong></p><p>Managed the corporate website for a HoReCa furniture manufacturer, aligning goals with the owner and coordinating marketing and technical teams.</p><ul><li>Restructured the product catalogue and improved UX, contributing to over 30% growth in online sales.</li><li>Improved website performance and search visibility.</li><li>Established communication between marketing, development, and management to improve website updates.</li></ul><a class="resume-link" href="https://www.linkedin.com/in/mykhailolypenko/overlay/Position/2618209177/treasury/?profileId=ACoAAEddsaMBc2mk9OBZL68QAcA3xkfnVooCpoM" target="_blank" rel="noopener noreferrer">Employer recommendation on LinkedIn</a></article>
+<article class="resume-card"><h4>International experience · Work &amp; Travel USA</h4><p>Customer-facing work in a sports merchandise store strengthened my English communication, customer service, adaptability, and collaboration in a multicultural environment.</p></article>
+<h3>Education</h3><div class="resume-grid"><article class="resume-card"><p class="resume-meta">Sep 2026 – Jun 2028 · In progress; expected graduation</p><h4>University of Žilina</h4><p>Faculty of Management Science and Informatics</p><p>Information Management · Engineer’s degree (Ing.)</p></article><article class="resume-card"><p class="resume-meta">Sep 2023 – Jun 2026 · Completed</p><h4>Technical University of Košice</h4><p>Computer Science · Bachelor’s degree (Bc.)</p></article></div>
+<h3>Certificates</h3><div class="resume-grid"><article class="resume-card"><p class="resume-meta">Cisco · Issued February 2026</p><h4>CCNA: Switching, Routing, and Wireless Essentials</h4><a class="resume-link" href="https://www.credly.com/badges/cb398a14-1605-497b-9566-72f6d7bf4f4f/linked_in_profile" target="_blank" rel="noopener noreferrer">View credential</a></article><article class="resume-card"><p class="resume-meta">Cisco · Issued February 2026</p><h4>CCNA: Enterprise Networking, Security, and Automation</h4><a class="resume-link" href="https://www.credly.com/badges/4edbc664-075b-44c2-8cfc-01e39571e6fe/linked_in_profile" target="_blank" rel="noopener noreferrer">View credential</a></article></div>
+</div>
+<div data-profile-lang="sk" hidden="">
+<div class="section-head"><span class="eyebrow">Pracovné skúsenosti</span><h2>Skúsenosti a vzdelanie</h2></div>
+<h3>Pracovné skúsenosti</h3><article class="resume-card"><p class="resume-meta">August 2024 – jún 2025 · Čiastočný úväzok · 11 mesiacov</p><h4>Digital Product Manager / Product Manager</h4><p><strong>LLC Mix-Line</strong></p><p>Riadil som firemný web výrobcu nábytku pre HoReCa, zosúlaďoval ciele s majiteľom a koordinoval marketingový a technický tím.</p><ul><li>Reštrukturalizoval som katalóg a zlepšil UX, čím som prispel k rastu online predaja o viac ako 30 %.</li><li>Zlepšil som výkon webu a viditeľnosť vo vyhľadávačoch.</li><li>Nastavil som komunikáciu medzi marketingom, vývojom a vedením pre efektívnejšie aktualizácie webu.</li></ul><a class="resume-link" href="https://www.linkedin.com/in/mykhailolypenko/overlay/Position/2618209177/treasury/?profileId=ACoAAEddsaMBc2mk9OBZL68QAcA3xkfnVooCpoM" target="_blank" rel="noopener noreferrer">Odporúčanie zamestnávateľa na LinkedIn</a></article>
+<article class="resume-card"><h4>Medzinárodné skúsenosti · Work &amp; Travel USA</h4><p>Práca so zákazníkmi v predajni športového oblečenia posilnila moju komunikáciu v angličtine, zákaznícky servis, prispôsobivosť a spoluprácu v multikultúrnom prostredí.</p></article>
+<h3>Vzdelanie</h3><div class="resume-grid"><article class="resume-card"><p class="resume-meta">September 2026 – jún 2028 · Prebieha; predpokladané ukončenie</p><h4>Žilinská univerzita v Žiline</h4><p>Fakulta riadenia a informatiky</p><p>Informačný manažment · Inžinierske štúdium (Ing.)</p></article><article class="resume-card"><p class="resume-meta">September 2023 – jún 2026 · Ukončené</p><h4>Technická univerzita v Košiciach</h4><p>Informatika · Bakalárske štúdium (Bc.)</p></article></div>
+<h3>Certifikáty</h3><div class="resume-grid"><article class="resume-card"><p class="resume-meta">Cisco · Vydané vo februári 2026</p><h4>CCNA: Switching, Routing, and Wireless Essentials</h4><a class="resume-link" href="https://www.credly.com/badges/cb398a14-1605-497b-9566-72f6d7bf4f4f/linked_in_profile" target="_blank" rel="noopener noreferrer">Overiť certifikát</a></article><article class="resume-card"><p class="resume-meta">Cisco · Vydané vo februári 2026</p><h4>CCNA: Enterprise Networking, Security, and Automation</h4><a class="resume-link" href="https://www.credly.com/badges/4edbc664-075b-44c2-8cfc-01e39571e6fe/linked_in_profile" target="_blank" rel="noopener noreferrer">Overiť certifikát</a></article></div>
+</div>
+<div data-profile-lang="ua" hidden="">
+<div class="section-head"><span class="eyebrow">Професійний досвід</span><h2>Досвід та освіта</h2></div>
+<h3>Професійний досвід</h3><article class="resume-card"><p class="resume-meta">Серпень 2024 – червень 2025 · Часткова зайнятість · 11 місяців</p><h4>Digital Product Manager / Product Manager</h4><p><strong>LLC Mix-Line</strong></p><p>Керував корпоративним сайтом виробника меблів для HoReCa, узгоджував цілі з власником і координував маркетингову й технічну команди.</p><ul><li>Реструктурував каталог і покращив UX, сприяючи зростанню онлайн-продажів більш ніж на 30%.</li><li>Покращив продуктивність сайту та видимість у пошуку.</li><li>Налагодив комунікацію між маркетингом, розробкою й керівництвом для ефективнішого оновлення сайту.</li></ul><a class="resume-link" href="https://www.linkedin.com/in/mykhailolypenko/overlay/Position/2618209177/treasury/?profileId=ACoAAEddsaMBc2mk9OBZL68QAcA3xkfnVooCpoM" target="_blank" rel="noopener noreferrer">Рекомендація роботодавця на LinkedIn</a></article>
+<article class="resume-card"><h4>Міжнародний досвід · Work &amp; Travel USA</h4><p>Робота з клієнтами в магазині спортивного одягу зміцнила мої навички спілкування англійською, клієнтського сервісу, адаптивності та співпраці в мультикультурному середовищі.</p></article>
+<h3>Освіта</h3><div class="resume-grid"><article class="resume-card"><p class="resume-meta">Вересень 2026 – червень 2028 · Навчання триває; очікуване завершення</p><h4>Жилінський університет</h4><p>Факультет управління та інформатики</p><p>Інформаційний менеджмент · Інженерна програма (Ing.)</p></article><article class="resume-card"><p class="resume-meta">Вересень 2023 – червень 2026 · Завершено</p><h4>Технічний університет в Кошицях</h4><p>Інформатика · Бакалавр (Bc.)</p></article></div>
+<h3>Сертифікати</h3><div class="resume-grid"><article class="resume-card"><p class="resume-meta">Cisco · Видано в лютому 2026</p><h4>CCNA: Switching, Routing, and Wireless Essentials</h4><a class="resume-link" href="https://www.credly.com/badges/cb398a14-1605-497b-9566-72f6d7bf4f4f/linked_in_profile" target="_blank" rel="noopener noreferrer">Перевірити сертифікат</a></article><article class="resume-card"><p class="resume-meta">Cisco · Видано в лютому 2026</p><h4>CCNA: Enterprise Networking, Security, and Automation</h4><a class="resume-link" href="https://www.credly.com/badges/4edbc664-075b-44c2-8cfc-01e39571e6fe/linked_in_profile" target="_blank" rel="noopener noreferrer">Перевірити сертифікат</a></article></div>
+</div>
+</div></section>
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="skills section-pad">
+  <div class="container">
+    <div class="section-head reveal in">
+      <span class="eyebrow" data-i18n="skills.label">Skills</span>
+      <h2 data-i18n="skills.title">Product, business, and technology.</h2>
+      <p data-i18n="skills.body">A practical mix of product management, communication, and technical skills developed through commercial work, university projects, and hackathons.</p>
+    </div>
+
+    <div class="group reveal in">
+      <div class="group-head">
+        <h3 data-i18n="skills.core">Core Skills</h3>
+        <span class="rule"></span>
+
+      </div>
+      <div class="skill-grid">
+        <div class="skill"><span class="glyph">◎</span><span class="name">Product Strategy</span></div>
+        <div class="skill"><span class="glyph">↗</span><span class="name">Product Development</span></div>
+        <div class="skill"><span class="glyph">≡</span><span class="name">Business Analysis</span></div>
+        <div class="skill"><span class="glyph">✓</span><span class="name">Project Management</span></div>
+        <div class="skill"><span class="glyph">◇</span><span class="name">User Experience</span></div>
+        <div class="skill"><span class="glyph">○</span><span class="name">Team Leadership</span></div>
+        <div class="skill"><span class="glyph">→</span><span class="name">Product Presentation</span></div>
+        <div class="skill"><span class="glyph">↔</span><span class="name">Stakeholder Management</span></div>
+        <div class="skill"><span class="glyph">≡</span><span class="name">Requirements Management</span></div>
+        <div class="skill"><span class="glyph">↑</span><span class="name">Feature Prioritisation</span></div>
+        <div class="skill"><span class="glyph">⊕</span><span class="name">Cross-functional Coordination</span></div>
+        <div class="skill"><span class="glyph">↻</span><span class="name">Process Improvement</span></div>
+      </div>
+    </div>
+
+    <div class="group reveal in">
+      <div class="group-head">
+        <h3 data-i18n="skills.tech">Technical Background</h3>
+        <span class="rule"></span>
+
+      </div>
+      <div class="skill-grid">
+        <div class="skill"><span class="glyph">/&gt;</span><span class="name">Laravel</span></div>
+        <div class="skill"><span class="glyph">DB</span><span class="name">PostgreSQL</span></div>
+        <div class="skill"><span class="glyph">{ }</span><span class="name">HTML / CSS / JS</span></div>
+        <div class="skill"><span class="glyph">⬡</span><span class="name">Docker</span></div>
+      </div>
+    </div>
+
+    <div class="group reveal in">
+      <div class="group-head">
+        <h3 data-i18n="skills.other">Languages</h3>
+        <span class="rule"></span>
+
+      </div>
+      <div class="skill-grid">
+        <div class="skill"><span class="glyph">UA</span><span class="name">Ukrainian · Native</span></div>
+        <div class="skill"><span class="glyph">RU</span><span class="name">Russian · Native</span></div>
+        <div class="skill"><span class="glyph">EN</span><span class="name">English · B2</span></div>
+        <div class="skill"><span class="glyph">SK</span><span class="name">Slovak · B2</span></div>
+        <div class="skill"><span class="glyph">CZ</span><span class="name">Czech · A2</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section id="portfolio" class="portfolio section-pad">
+  <div class="container">
+    <div class="section-head reveal in">
+      <span class="eyebrow" data-i18n="work.label">Case Studies</span>
+      <h2 data-i18n="work.title">Products I helped move forward.</h2>
+      <p data-i18n="work.body">Three projects showing commercial impact, cross-functional product coordination, and the ability to understand the technology behind a product.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="filters reveal in">
+      <button class="active" data-filter="all" data-i18n="filter.all">All</button>
+      <button data-filter="product" data-i18n="filter.product">Product</button>
+      <button data-filter="management" data-i18n="filter.management">Management</button>
+      <button data-filter="technical" data-i18n="filter.technical">Technical</button>
+    </div>
+
+    <div class="projects" id="projects">
+      <article class="project reveal in" data-cat="product">
+        <div class="thumb">
+          <div class="ph">MIX-LINE / DIGITAL COMMERCE</div>
+          <div class="overlay">
+            <a class="pill" href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#contact" data-i18n="case.discuss">Discuss this project</a>
+          </div>
+        </div>
+        <div class="body">
+          <h4>Mix-Line Corporate Website</h4>
+          <p data-i18n="project.mix.body">Led the development and improvement of a HoReCa furniture company’s corporate website. Restructured the catalogue, improved UX, coordinated marketing and technical teams, and contributed to a 30%+ increase in online sales.</p>
+          <div class="tags"><span class="tag">Product Management</span><span class="tag">UX</span><span class="tag">+30% Sales</span></div>
+        </div>
+      </article>
+
+      <article class="project reveal delay-1 in" data-cat="management">
+        <div class="thumb">
+          <div class="ph">KYSUCE / COMMUNITY PLATFORM</div>
+          <div class="overlay">
+            <a class="pill" href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#contact" data-i18n="case.discuss">Discuss this project</a>
+          </div>
+        </div>
+        <div class="body">
+          <h4>Kysuce Community Portal</h4>
+          <p data-i18n="project.kysuce.body">Managed the product development of a regional portal connecting three Kysuce communities. Coordinated the product work, shaped the solution, presented the final concept, and supported its promotion.</p>
+          <div class="tags"><span class="tag">Product Leadership</span><span class="tag">Presentation</span><span class="tag">Promotion</span></div>
+        </div>
+      </article>
+
+      <article class="project reveal delay-2 in" data-cat="technical">
+        <div class="thumb">
+          <div class="ph">FYZIKA1HELP / LEARNING PLATFORM</div>
+          <div class="overlay">
+            <a class="pill" href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#contact" data-i18n="case.discuss">Discuss this project</a>
+          </div>
+        </div>
+        <div class="body">
+          <h4>Physics Learning Platform</h4>
+          <p data-i18n="project.physics.body">Designed and developed a multilingual web platform for testing and improving Physics I knowledge. Built several question formats, localisation, and an administration area as a complete bachelor’s project.</p>
+          <div class="tags"><span class="tag">Laravel</span><span class="tag">PostgreSQL</span><span class="tag">Product Development</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact section-pad">
+  <div class="container">
+    <div class="section-head reveal in">
+      <span class="eyebrow" data-i18n="contact.label">Contact</span>
+      <h2 data-i18n="contact.title">Let's build something useful.</h2>
+      <p class="blurb" data-i18n="contact.body">I am open to Product Manager roles, internships, and part-time opportunities in Slovakia or remotely. If my experience fits your team, I would be glad to talk.</p>
+    </div>
+
+    <form class="form reveal in" id="contactForm"><p class="form-note" data-i18n="form.note">Opens your email app. Or write to <a href="mailto:mykhailolypenko@outlook.com">mykhailolypenko@outlook.com</a>.</p>
+      <div class="row">
+        <div class="field">
+          <input id="f-name" name="name" autocomplete="name" required="" type="text" placeholder=" ">
+          <label for="f-name" data-i18n="form.name">Name</label>
+
+        </div>
+        <div class="field">
+          <input id="f-email" name="email" autocomplete="email" required="" type="email" placeholder=" ">
+          <label for="f-email">Email</label>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <input id="f-subject" type="text" placeholder=" ">
+          <label for="f-subject" data-i18n="form.subject">Subject</label>
+
+        </div>
+      </div>
+      <div class="row" style="grid-template-columns:1fr;">
+        <div class="field">
+          <textarea required="" id="f-msg" rows="4" placeholder=" "></textarea>
+          <label for="f-msg" data-i18n="form.message">Message</label>
+
+        </div>
+      </div>
+      <div class="submit-row">
+        <span class="line"></span>
+        <button type="submit" class="submit" data-i18n="form.send">Open email app</button>
+        <span class="line"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-top">
+    <h3 class="foot-name">Mykhailo Lypenko.</h3>
+    <div class="foot-socials">
+      <a href="mailto:mykhailolypenko@outlook.com" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 7 9-7"></path></svg></a>
+      <a href="https://t.me/MykhailoLypenko" target="_blank" rel="noreferrer" aria-label="Telegram"><span style="font:600 11px &#39;JetBrains Mono&#39;,monospace">TG</span></a>
+      <a href="https://www.linkedin.com/in/mykhailolypenko/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.2 8h4.6v14H.2V8Zm7.5 0h4.41v1.92h.06c.62-1.17 2.13-2.4 4.39-2.4 4.69 0 5.56 3.08 5.56 7.08V22h-4.6v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.51 1.69-2.51 3.43V22H7.7V8Z"></path></svg></a>
+      <a href="https://www.instagram.com/flopyevv/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Mykhailo Lypenko. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <span><a href="https://mykhailo-lypenko-portfolio.elchapos.chatgpt.site/#top" data-i18n="footer.top">Back to top</a></span>
+  </div>
+</footer>
+
+<button class="to-top show" id="toTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+</button>
+
+<script>
+  const translations = {
+    en: {
+      'nav.about':'About','nav.skills':'Skills','nav.work':'Case Studies','nav.contact':'Contact','nav.cta':'Contact Me',
+      'hero.kicker':'Product Portfolio — 2026','hero.hello':'Hi, I am','hero.based':'Based in<b>Žilina / Bratislava</b>','hero.available':'Available<b>Open to work</b>','hero.experience':'Experience<b>1 year in product</b>',
+      'intro.title':'Turning ideas into useful products.','intro.body':'I combine product thinking, business analysis, and a technical background to move ideas from concept to delivery. I focus on clear user value, aligned teams, and measurable outcomes.','intro.more':'Read More',
+      'about.label':'About Me','about.title':'Product thinking backed by technology.','about.body':'I am a Product Manager with hands-on experience leading a corporate website redesign, coordinating marketing and technical teams, and improving online sales by more than 30%. With a Computer Science degree and ongoing studies in Information Management, I bridge business goals, user needs, and development.',
+      'service.product.title':'Product Strategy','service.product.body':'Defining product value, shaping concepts, prioritising features, and keeping decisions connected to user and business needs.','service.analysis.title':'Business Analysis','service.analysis.body':'Translating goals into clear requirements, improving workflows, and connecting stakeholder expectations with delivery.','service.delivery.title':'Project Coordination','service.delivery.body':'Aligning cross-functional teams, managing priorities and deadlines, and presenting product direction clearly.',
+      'skills.label':'Skills','skills.title':'Product, business, and technology.','skills.body':'A practical mix of product management, communication, and technical skills developed through commercial work, university projects, and hackathons.','skills.core':'Core Skills','skills.tech':'Technical Background','skills.other':'Communication & Languages',
+      'work.label':'Case Studies','work.title':'Products I helped move forward.','work.body':'Three projects showing commercial impact, cross-functional product coordination, and the ability to understand the technology behind a product.','work.recent':'Selected<br/>Projects.',
+      'project.mix.body':'Led the development and improvement of a HoReCa furniture company’s corporate website. Restructured the catalogue, improved UX, coordinated marketing and technical teams, and contributed to a 30%+ increase in online sales.','project.kysuce.body':'Managed the product development of a regional portal connecting three Kysuce communities. Coordinated the product work, shaped the solution, presented the final concept, and supported its promotion.','project.physics.body':'Designed and developed a multilingual web platform for testing and improving Physics I knowledge. Built several question formats, localisation, and an administration area as a complete bachelor’s project.',
+      'contact.label':'Contact','contact.title':"Let's build something useful.",'contact.body':'I am open to Product Manager roles, internships, and part-time opportunities in Slovakia or remotely. If my experience fits your team, I would be glad to talk.','form.name':'Name','form.phone':'Phone Number','form.subject':'Subject','form.message':'Message','form.send':'Send Message'
+    },
+    sk: {
+      'nav.about':'O mne','nav.skills':'Zručnosti','nav.work':'Projekty','nav.contact':'Kontakt','nav.cta':'Kontaktovať',
+      'hero.kicker':'Produktové portfólio — 2026','hero.hello':'Ahoj, som','hero.based':'Pôsobím v<b>Žiline / Bratislave</b>','hero.available':'Dostupnosť<b>Otvorený ponukám</b>','hero.experience':'Skúsenosti<b>1 rok v produktovej oblasti</b>',
+      'intro.title':'Mením nápady na užitočné produkty.','intro.body':'Spájam produktové myslenie, biznis analýzu a technické znalosti, aby som posúval nápady od konceptu až po realizáciu. Zameriavam sa na hodnotu pre používateľa, spoluprácu tímu a merateľné výsledky.','intro.more':'Čítať viac',
+      'about.label':'O mne','about.title':'Produktové myslenie podporené technológiami.','about.body':'Som Product Manager s praktickou skúsenosťou s vedením redizajnu firemného webu, koordináciou marketingového a technického tímu a zvýšením online predaja o viac ako 30 %. Vďaka vzdelaniu v informatike a štúdiu informačného manažmentu prepájam obchodné ciele, potreby používateľov a vývoj.',
+      'service.product.title':'Produktová stratégia','service.product.body':'Definovanie hodnoty produktu, tvorba konceptov, prioritizácia funkcií a prepájanie rozhodnutí s potrebami používateľov a biznisu.','service.analysis.title':'Biznis analýza','service.analysis.body':'Premena cieľov na jasné požiadavky, zlepšovanie procesov a prepájanie očakávaní stakeholderov s realizáciou.','service.delivery.title':'Koordinácia projektov','service.delivery.body':'Zlaďovanie tímov, riadenie priorít a termínov a jasná prezentácia smerovania produktu.',
+      'skills.label':'Zručnosti','skills.title':'Produkt, biznis a technológie.','skills.body':'Praktická kombinácia produktového manažmentu, komunikácie a technických znalostí získaná v komerčnej práci, univerzitných projektoch a hackathonoch.','skills.core':'Kľúčové zručnosti','skills.tech':'Technické znalosti','skills.other':'Komunikácia a jazyky',
+      'work.label':'Prípadové štúdie','work.title':'Produkty, ktoré som pomohol posunúť.','work.body':'Tri projekty ukazujúce komerčný prínos, koordináciu produktového tímu a schopnosť rozumieť technológiám za produktom.','work.recent':'Vybrané<br/>projekty.',
+      'project.mix.body':'Viedol som vývoj a zlepšovanie firemného webu výrobcu nábytku pre HoReCa. Reštrukturalizoval som katalóg, zlepšil UX, koordinoval marketingový a technický tím a prispel k rastu online predaja o viac ako 30 %.','project.kysuce.body':'Riadil som vývoj regionálneho portálu prepájajúceho tri kysucké obce. Koordinoval som produktovú prácu, formoval riešenie, prezentoval výsledný koncept a podporoval jeho propagáciu.','project.physics.body':'Navrhol a vyvinul som viacjazyčnú webovú platformu na testovanie a zlepšovanie vedomostí z Fyziky I. Ako bakalársky projekt som vytvoril viacero typov otázok, lokalizáciu a administráciu.',
+      'contact.label':'Kontakt','contact.title':'Vytvorme spolu niečo užitočné.','contact.body':'Som otvorený pozíciám Product Managera, stážam a práci na čiastočný úväzok na Slovensku alebo na diaľku. Ak moje skúsenosti zapadajú do vášho tímu, rád sa porozprávam.','form.name':'Meno','form.phone':'Telefón','form.subject':'Predmet','form.message':'Správa','form.send':'Odoslať správu'
+    },
+    ua: {
+      'nav.about':'Про мене','nav.skills':'Навички','nav.work':'Проєкти','nav.contact':'Контакти','nav.cta':'Написати мені',
+      'hero.kicker':'Продуктове портфоліо — 2026','hero.hello':'Привіт, я','hero.based':'Місце<b>Жиліна / Братислава</b>','hero.available':'Статус<b>Відкритий до пропозицій</b>','hero.experience':'Досвід<b>1 рік у продуктовій сфері</b>',
+      'intro.title':'Перетворюю ідеї на корисні продукти.','intro.body':'Я поєдную продуктове мислення, бізнес-аналіз і технічну підготовку, щоб проводити ідеї від концепції до реалізації. Зосереджуюся на цінності для користувача, злагодженій роботі команди та вимірюваних результатах.','intro.more':'Докладніше',
+      'about.label':'Про мене','about.title':'Продуктове мислення, підкріплене технологіями.','about.body':'Я Product Manager із практичним досвідом керування редизайном корпоративного сайту, координації маркетингової та технічної команд і збільшення онлайн-продажів більш ніж на 30%. Освіта в Computer Science та навчання за напрямом Information Management допомагають мені поєднувати бізнес-цілі, потреби користувачів і розробку.',
+      'service.product.title':'Продуктова стратегія','service.product.body':'Визначення цінності продукту, формування концепції, пріоритизація функцій і зв’язок рішень із потребами користувачів та бізнесу.','service.analysis.title':'Бізнес-аналіз','service.analysis.body':'Перетворення цілей на чіткі вимоги, вдосконалення процесів і узгодження очікувань стейкхолдерів із реалізацією.','service.delivery.title':'Координація проєктів','service.delivery.body':'Узгодження роботи команд, керування пріоритетами й термінами та зрозуміла презентація напряму продукту.',
+      'skills.label':'Навички','skills.title':'Продукт, бізнес і технології.','skills.body':'Практичне поєднання продуктового менеджменту, комунікації та технічних навичок, розвинених у комерційній роботі, університетських проєктах і хакатонах.','skills.core':'Ключові навички','skills.tech':'Технічна підготовка','skills.other':'Комунікація та мови',
+      'work.label':'Кейси','work.title':'Продукти, які я допоміг розвинути.','work.body':'Три проєкти, що демонструють комерційний результат, координацію продуктової команди та розуміння технологій, на яких працює продукт.','work.recent':'Обрані<br/>проєкти.',
+      'project.mix.body':'Керував розробкою та вдосконаленням корпоративного сайту виробника меблів для HoReCa. Реструктурував каталог, покращив UX, координував маркетингову й технічну команди та допоміг збільшити онлайн-продажі більш ніж на 30%.','project.kysuce.body':'Керував розробкою регіонального порталу, що об’єднує три громади Кисуце. Координував продуктову роботу, формував рішення, презентував фінальну концепцію та займався її просуванням.','project.physics.body':'Спроєктував і розробив багатомовну вебплатформу для перевірки та вдосконалення знань із Physics I. У межах бакалаврського проєкту реалізував кілька типів запитань, локалізацію та панель адміністратора.',
+      'contact.label':'Контакти','contact.title':'Створімо щось корисне.','contact.body':'Я відкритий до позицій Product Manager, стажувань і часткової зайнятості у Словаччині або віддалено. Якщо мій досвід підходить вашій команді, буду радий поспілкуватися.','form.name':'Ім’я','form.phone':'Телефон','form.subject':'Тема','form.message':'Повідомлення','form.send':'Надіслати'
+    }
+  };
+
+  const refinements = {
+en: {'hero.experience':'Commercial experience<b>11 months</b>','form.send':'Open email app','form.note':'Opens your email app. Or write to <a href="mailto:mykhailolypenko@outlook.com">mykhailolypenko@outlook.com</a>.','filter.all':'All','filter.product':'Product','filter.management':'Management','filter.technical':'Technical','case.discuss':'Discuss this project','footer.top':'Back to top','footer.rights':'All rights reserved.'},
+sk: {'hero.experience':'Komerčná prax<b>11 mesiacov</b>','form.send':'Otvoriť e-mail','form.note':'Otvorí e-mailovú aplikáciu. Alebo napíšte na <a href="mailto:mykhailolypenko@outlook.com">mykhailolypenko@outlook.com</a>.','filter.all':'Všetky','filter.product':'Produkt','filter.management':'Manažment','filter.technical':'Technológie','case.discuss':'Porozprávajme sa o projekte','footer.top':'Späť hore','footer.rights':'Všetky práva vyhradené.'},
+ua: {'hero.experience':'Комерційний досвід<b>11 місяців</b>','form.send':'Відкрити пошту','form.note':'Відкриє поштовий застосунок. Або напишіть на <a href="mailto:mykhailolypenko@outlook.com">mykhailolypenko@outlook.com</a>.','filter.all':'Усі','filter.product':'Продукт','filter.management':'Менеджмент','filter.technical':'Технології','case.discuss':'Обговорити проєкт','footer.top':'Нагору','footer.rights':'Усі права захищено.'}
+};
+  Object.keys(refinements).forEach(lang=>Object.assign(translations[lang],refinements[lang]));
+  const skillLabels = {"en":["Product Strategy","Product Development","Business Analysis","Project Management","User Experience","Team Leadership","Product Presentation","Stakeholder Management","Requirements Management","Feature Prioritisation","Cross-functional Coordination","Process Improvement","Laravel","PostgreSQL","HTML / CSS / JS","Docker","Ukrainian · Native","Russian · Native","English · B2","Slovak · B2","Czech · A2"],"sk":["Produktová stratégia","Vývoj produktov","Biznis analýza","Projektový manažment","Používateľská skúsenosť","Vedenie tímu","Prezentácia produktu","Riadenie vzťahov so stakeholdermi","Riadenie požiadaviek","Prioritizácia funkcií","Koordinácia medzi tímami","Zlepšovanie procesov","Laravel","PostgreSQL","HTML / CSS / JS","Docker","Ukrajinčina · Rodný jazyk","Ruština · Rodný jazyk","Angličtina · B2","Slovenčina · B2","Čeština · A2"],"ua":["Продуктова стратегія","Розробка продуктів","Бізнес-аналіз","Управління проєктами","Користувацький досвід","Керівництво командою","Презентація продукту","Робота зі стейкхолдерами","Управління вимогами","Пріоритизація функцій","Міжфункціональна координація","Удосконалення процесів","Laravel","PostgreSQL","HTML / CSS / JS","Docker","Українська · Рідна","Російська · Рідна","Англійська · B2","Словацька · B2","Чеська · A2"]};
+  const setLanguage = (lang) => {
+    if (!translations[lang]) lang = 'en';
+    translations[lang]['skills.other'] = {en:'Languages',sk:'Jazyky',ua:'Мови'}[lang];
+    document.querySelectorAll('#skills .skill .name').forEach((el,i) => {el.textContent = skillLabels[lang][i];});
+    document.querySelectorAll('[data-profile-lang]').forEach(el => {el.hidden = el.dataset.profileLang !== lang;});
+    document.getElementById('background-nav').textContent = {en:'Background',sk:'Vzdelanie a prax',ua:'Освіта й досвід'}[lang];
+    document.documentElement.lang = lang === 'ua' ? 'uk' : lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const value = translations[lang][el.dataset.i18n];
+      if (value) el.innerHTML = value;
+    });
+    document.querySelectorAll('[data-lang]').forEach(btn => {btn.classList.toggle('active', btn.dataset.lang === lang);btn.setAttribute('aria-pressed',String(btn.dataset.lang === lang));});
+    document.getElementById('current-language').textContent = {en:'English',sk:'Slovenčina',ua:'Українська'}[lang];
+    document.querySelector('#language-picker summary').setAttribute('aria-label',{en:'Choose language',sk:'Vybrať jazyk',ua:'Обрати мову'}[lang]);
+    try { localStorage.setItem('portfolio-language', lang); } catch {}
+  };
+  const languagePicker = document.getElementById('language-picker');
+  document.querySelectorAll('[data-lang]').forEach(btn => btn.addEventListener('click', () => {setLanguage(btn.dataset.lang);languagePicker.open=false;languagePicker.querySelector('summary').focus();}));
+  document.addEventListener('click', e => {if(!languagePicker.contains(e.target)) languagePicker.open=false;});
+  document.addEventListener('keydown', e => {if(e.key==='Escape' && languagePicker.open){languagePicker.open=false;languagePicker.querySelector('summary').focus();}});
+  document.addEventListener('focusin', e => {if(!languagePicker.contains(e.target)) languagePicker.open=false;});
+  let savedLanguage = 'en'; try { savedLanguage = localStorage.getItem('portfolio-language') || 'en'; } catch {} setLanguage(savedLanguage);
+
+  const menuBtn = document.querySelector('.menu-btn');
+  const mobileNav = document.querySelector('.nav nav');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  const closeMenu = () => { mobileNav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); };
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => {if(e.key === 'Escape' && mobileNav.classList.contains('open')) {closeMenu(); menuBtn.focus();}});
+  window.addEventListener('resize',closeMenu);
+
+  document.getElementById('contactForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+
+    const subject = document.getElementById('f-subject').value.trim() || 'Portfolio contact';
+    const message = document.getElementById('f-msg').value.trim();
+    const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
+    window.location.href = `mailto:mykhailolypenko@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+
+  // ----- Sticky nav blur on scroll -----
+  const nav = document.getElementById('nav');
+  const toTop = document.getElementById('toTop');
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 24);
+    toTop.classList.toggle('show', y > 600);
+    // active link
+    const sections = ['about','background','skills','portfolio','contact'];
+    let current = null;
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const r = el.getBoundingClientRect();
+      if (r.top <= window.innerHeight * 0.4 && r.bottom > window.innerHeight * 0.4) {
+        current = id;
+      }
+    }
+    document.querySelectorAll('[data-link]').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  };
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ----- Reveal on scroll -----
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ----- Portfolio filters -----
+  const filterBtns = document.querySelectorAll('.filters button');
+  const projects = document.querySelectorAll('#projects .project');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      projects.forEach(p => {
+        const show = (f === 'all') || (p.dataset.cat === f);
+        p.hidden = !show;
+      });
+    });
+  });
+</script>
+
+
+</body></html>
