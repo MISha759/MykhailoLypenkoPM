@@ -8,28 +8,61 @@ const menuButton = document.querySelector('.menu-btn');
 const ctaButton = nav.querySelector('.cta');
 const navigation = document.getElementById('primary-navigation');
 const navigationLinks = [...navigation.querySelectorAll('[data-link]')];
+const langLinks = [...nav.querySelectorAll('[data-lang-switch]')];
+const trackedSections = [...document.querySelectorAll('main section[id]')].filter(section => section.id !== 'top');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const mobileViewport = window.matchMedia('(max-width: 960px)');
 
 function setMenu(open, returnFocus = false) {
   nav.classList.toggle('menu-open', open);
   menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  const openLabel = menuButton.dataset.openLabel || 'Open navigation';
+  const closeLabel = menuButton.dataset.closeLabel || 'Close navigation';
+  menuButton.setAttribute('aria-label', open ? closeLabel : openLabel);
   if (returnFocus) menuButton.focus();
+}
+
+let currentSectionId = null;
+
+function syncLanguageLinks(explicitAnchor = null) {
+  let anchor = '';
+  if (explicitAnchor && explicitAnchor !== '#top') {
+    anchor = explicitAnchor.startsWith('#') ? explicitAnchor : `#${explicitAnchor}`;
+  } else if (currentSectionId && currentSectionId !== 'top') {
+    anchor = `#${currentSectionId}`;
+  } else if (window.location.hash && window.location.hash !== '#top') {
+    anchor = window.location.hash;
+  }
+  langLinks.forEach(link => {
+    const baseHref = link.dataset.baseHref || link.getAttribute('href').split('#')[0];
+    link.setAttribute('href', `${baseHref}${anchor}`);
+  });
 }
 
 menuButton.addEventListener('click', () => {
   setMenu(menuButton.getAttribute('aria-expanded') !== 'true');
 });
 if (ctaButton) {
-  ctaButton.addEventListener('click', () => setMenu(false));
+  ctaButton.addEventListener('click', () => {
+    setMenu(false);
+    syncLanguageLinks('#contact');
+  });
 }
+langLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    syncLanguageLinks();
+    setMenu(false);
+  });
+});
 navigationLinks.forEach(link => link.addEventListener('click', () => {
   setMenu(false);
+  syncLanguageLinks(link.getAttribute('href'));
   if (mobileViewport.matches) {
     const target = document.querySelector(link.getAttribute('href'));
-    target.setAttribute('tabindex', '-1');
-    target.focus({ preventScroll: true });
+    if (target) {
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    }
   }
 }));
 document.addEventListener('keydown', event => {
@@ -42,6 +75,7 @@ nav.addEventListener('focusout', event => {
   if (event.relatedTarget && !nav.contains(event.relatedTarget)) setMenu(false);
 });
 mobileViewport.addEventListener('change', () => setMenu(false));
+window.addEventListener('hashchange', () => syncLanguageLinks(window.location.hash));
 
 let scrollQueued = false;
 function updateScroll() {
@@ -52,17 +86,29 @@ function updateScroll() {
   let current = null;
   for (const link of navigationLinks) {
     const section = document.querySelector(link.getAttribute('href'));
+    if (!section) continue;
     const rect = section.getBoundingClientRect();
     if (rect.top <= window.innerHeight * 0.4 && rect.bottom > window.innerHeight * 0.4) {
       current = section.id;
     }
   }
+  let activeSection = current;
+  if (!activeSection) {
+    for (const section of trackedSections) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.4 && rect.bottom > window.innerHeight * 0.4) {
+        activeSection = section.id;
+      }
+    }
+  }
+  currentSectionId = y <= 80 ? null : activeSection;
   navigationLinks.forEach(link => {
     const active = link.getAttribute('href') === '#' + current;
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   });
+  syncLanguageLinks();
   scrollQueued = false;
 }
 window.addEventListener('scroll', () => {
@@ -74,6 +120,8 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', updateScroll);
 updateScroll();
 toTop.addEventListener('click', () => {
+  currentSectionId = null;
+  syncLanguageLinks('');
   window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
   document.querySelector('.logo').focus({ preventScroll: true });
 });
@@ -96,6 +144,25 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
 const filterButtons = [...document.querySelectorAll('.filters button')];
 const projects = [...document.querySelectorAll('#projects .project')];
 const filterStatus = document.getElementById('filter-status');
+
+function formatFilterStatus(filter, count, label) {
+  if (filter === 'all') {
+    const tpl = (filterStatus && filterStatus.dataset.statusAll) || 'Showing all {count} case studies';
+    return tpl.replace('{count}', String(count));
+  }
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  let tpl;
+  if (count === 1 || (mod10 === 1 && mod100 !== 11 && document.documentElement.lang !== 'en')) {
+    tpl = (filterStatus && filterStatus.dataset.statusOne) || 'Showing {count} case study — {filter}';
+  } else if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) {
+    tpl = (filterStatus && filterStatus.dataset.statusFew) || 'Showing {count} case studies — {filter}';
+  } else {
+    tpl = (filterStatus && filterStatus.dataset.statusMany) || 'Showing {count} case studies — {filter}';
+  }
+  return tpl.replace('{count}', String(count)).replace('{filter}', label);
+}
+
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter;
@@ -113,9 +180,7 @@ filterButtons.forEach(button => {
         count += 1;
       }
     });
-    filterStatus.textContent = filter === 'all'
-      ? `Showing all ${count} case studies`
-      : `Showing ${count} case ${count === 1 ? 'study' : 'studies'} — ${button.textContent.trim()}`;
+    filterStatus.textContent = formatFilterStatus(filter, count, button.textContent.trim());
   });
 });
 
