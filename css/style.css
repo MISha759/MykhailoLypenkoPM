@@ -19,7 +19,6 @@
   --font-sans: "Archivo", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-narrow: "Archivo Narrow", "Archivo", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-serif: Georgia, "Times New Roman", serif;
 
   /* Typography — Scale */
   --t-display: clamp(44px, 6vw, 96px);
@@ -253,7 +252,6 @@ button {
 .action-link {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
   min-height: var(--link-h);
   font-family: var(--font-mono);
   font-size: var(--t-xs);
@@ -262,21 +260,11 @@ button {
   color: var(--ink);
   text-decoration: underline;
   text-underline-offset: var(--link-offset);
-  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  transition: opacity var(--dur-fast) var(--ease);
 }
 
 .action-link:hover {
   opacity: 0.72;
-}
-
-.link-arrow {
-  display: inline-block;
-  font-family: var(--font-sans);
-  transition: transform var(--dur-fast) var(--ease);
-}
-
-.action-link:hover .link-arrow {
-  transform: translate(1px, -1px);
 }
 
 .document-actions {
@@ -612,18 +600,7 @@ section[id] {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-2);
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
   margin-bottom: var(--space-2);
-}
-
-.hero .role::before {
-  content: "";
-  width: 40px;
-  height: 1px;
-  background: var(--ink);
-  flex-shrink: 0;
 }
 
 .hero .specialization {
@@ -1156,17 +1133,6 @@ section[id] {
   width: var(--logo-w-square);
   height: var(--logo-box-h);
   padding: var(--space-1);
-}
-
-.quotation-mark {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 56px;
-  line-height: 0.65;
-  height: 28px;
-  opacity: 0.32;
-  margin: 0 0 var(--space-2);
-  user-select: none;
 }
 
 .recommendation blockquote {

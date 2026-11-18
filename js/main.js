@@ -147,18 +147,18 @@ const filterStatus = document.getElementById('filter-status');
 
 function formatFilterStatus(filter, count, label) {
   if (filter === 'all') {
-    const tpl = (filterStatus && filterStatus.dataset.statusAll) || 'Showing all {count} case studies';
+    const tpl = (filterStatus && filterStatus.dataset.statusAll) || 'Showing all {count} projects';
     return tpl.replace('{count}', String(count));
   }
   const mod10 = count % 10;
   const mod100 = count % 100;
   let tpl;
   if (count === 1 || (mod10 === 1 && mod100 !== 11 && document.documentElement.lang !== 'en')) {
-    tpl = (filterStatus && filterStatus.dataset.statusOne) || 'Showing {count} case study — {filter}';
+    tpl = (filterStatus && filterStatus.dataset.statusOne) || 'Showing {count} project in {filter}';
   } else if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) {
-    tpl = (filterStatus && filterStatus.dataset.statusFew) || 'Showing {count} case studies — {filter}';
+    tpl = (filterStatus && filterStatus.dataset.statusFew) || 'Showing {count} projects in {filter}';
   } else {
-    tpl = (filterStatus && filterStatus.dataset.statusMany) || 'Showing {count} case studies — {filter}';
+    tpl = (filterStatus && filterStatus.dataset.statusMany) || 'Showing {count} projects in {filter}';
   }
   return tpl.replace('{count}', String(count)).replace('{filter}', label);
 }
